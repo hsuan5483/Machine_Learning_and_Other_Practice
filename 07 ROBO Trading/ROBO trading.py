@@ -83,7 +83,7 @@ for i in range(11):
         越大越好
     '''
     
-    # 選alpha最小的前五檔股票
+    # 選指標最大的前五檔股票
     df = df_reg(data , twii)
     T =  ((data.mean()/(data.std() + data.skew())) - df['alpha']).sort_values()
     T = list(T[:5].index)
